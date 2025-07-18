@@ -6,10 +6,11 @@ import Swal from 'sweetalert2';
 const Navbar = () => {
   const {user,signout}=useContext(authcontext)
     const links=<>
-    <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/tutions'}>Tution jobs</NavLink></li>
-    <li><NavLink>Candidate</NavLink></li>
-    <li><NavLink>Blog</NavLink></li>
+    <li><NavLink to={'/alltutors'}>PREMIUM TUTORS</NavLink></li>
+    <li><NavLink to={'/tutions'}>TUTION JOBS</NavLink></li>
+    <li><NavLink to={'/reqtutor'}>TUTOR REQUEST</NavLink></li>
+    <li><NavLink to={'/bectutor'}>BECOME TUTOR</NavLink></li>
+    <li><NavLink to={'/myapplication'}>MY APPLICATION</NavLink></li>
     </>
     const handlelogout=()=>{
  signout();
@@ -23,7 +24,9 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
-    <a className="btn btn-ghost text-xl">BD Tutor</a>
+    <NavLink to={'/'}>
+ <h2 className="btn btn-ghost text-xl">Tution Cloud</h2>
+    </NavLink>   
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

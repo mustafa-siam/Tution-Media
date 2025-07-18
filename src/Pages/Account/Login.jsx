@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import axios from 'axios';
 import { authcontext } from '../../Provider/Authprovider';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -22,7 +23,7 @@ const Login = () => {
                          showConfirmButton:false,
                          timer:1000
                          })
-              setTimeout(() =>navigate('/'), 2000);
+          //    setTimeout(() =>navigate('/'), 2000);
         })
         .catch(error=>{
           console.error(error)

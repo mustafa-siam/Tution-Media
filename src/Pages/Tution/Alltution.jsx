@@ -9,7 +9,7 @@ const Alltution = () => {
       .then(data=>settutions(data))
     },[])
     return (
-        <div className='grid grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2'>
           {
           tutions.map(tution=><Tutioncard key={tution._id} tution={tution}></Tutioncard>)
           }

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Tutioncard = ({tution}) => {
-    const {title,subject,class: studentClass,location,mode,salary,daysPerWeek,preferredTutor,status} = tution;
+    const {subject,class: studentClass,location,mode,salary,daysPerWeek,preferredTutor,status,_id} = tution;
    return (
-    <div className="card bg-base-100 w-full max-w-md shadow-md rounded-xl border border-gray-200">
+    <div className="card bg-base-100 w-full max-w-md shadow-md rounded-xl border border-gray-200 hover:scale-110">
       <div className="card-body p-6 space-y-4">
         <div className="flex justify-between items-center">
-          <h2 className="card-title text-xl font-semibold text-gray-800">{title}</h2>
+          <h2 className="card-title text-xl font-semibold text-gray-800">Tutor Needed id {parseInt(_id.slice(-4),16)}</h2>
           <span className="text-sm bg-fuchsia-600 font-semibold rounded-md shadow px-3 py-1 text-white">
             {status}
           </span>
@@ -41,9 +42,12 @@ const Tutioncard = ({tution}) => {
           </p>
         </div>
         <div className="card-actions justify-end">
+          <Link to={`/tutiondetails/${tution._id}`}>
           <button className="btn bg-gradient-to-r from-[#540654] via-[#cc0d85] to-[#540654] text-white hover:scale-105 duration-300">
             View Details
           </button>
+          </Link>
+          
         </div>
       </div>
     </div>

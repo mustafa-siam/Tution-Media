@@ -20,6 +20,7 @@ e.preventDefault();
         creatuser(email,password)
         .then(result=>{
             console.log(result.user)
+            
              Swal.fire({
           title: "Registration Successful",
           icon: "success",
@@ -27,7 +28,7 @@ e.preventDefault();
           timer: 1500,
         });
          form.reset();
-        setTimeout(() => navigate("/"), 1500);
+       setTimeout(() => navigate("/"), 1500);
         })
         .catch(error=>{
             console.error(error)
